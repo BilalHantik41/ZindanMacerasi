@@ -15,7 +15,8 @@ namespace ZindanMacerasi
         public override void SpecialMove(Character target)
         {
             ConsoleHelper.WriteLine($"{Name} yüksek hasarlı ejderha nefesini üflüyor!!!. ", ConsoleColor.DarkRed);
-            Skills[0].Use(this, target);
+            int damage = Skills[0].Use(this, target);
+            target.TakeDamage(damage);
 
         }
     }
