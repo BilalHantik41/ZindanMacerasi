@@ -194,7 +194,6 @@ namespace ZindanMacerasi
         private void FinalBossBattle()
         {
             ConsoleHelper.WriteColored($"\n[SON BOSS] SON ODADASINIZ. ORTAM ÇOK TEHLİKELİ DİKKAT ET. {_dragonLord}'a Selam ÇAK BAKIYIM\n", ConsoleColor.Red);
-            Battle(_hero, _dragonLord);
 
             bool victorious = Battle(_hero, _dragonLord);
             if (victorious)
