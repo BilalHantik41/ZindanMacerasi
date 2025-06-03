@@ -17,7 +17,8 @@ namespace ZindanMacerasi
         public override void SpecialMove(Character target)
         {
             ConsoleHelper.WriteLine($"{Name} buz topu fırlatılıyor. ", ConsoleColor.DarkBlue);
-            Skills[0].Use(this, target);
+            int damage = Skills[0].Use(this, target);
+            target.TakeDamage(damage);
         }
     }
 }

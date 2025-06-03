@@ -16,7 +16,8 @@ namespace ZindanMacerasi
         {
             
             ConsoleHelper.WriteLine($"{Name} sinsi bir saldırı yapıyor. ", ConsoleColor.Red);
-            Skills[0].Use(this, target);
+            int damage = Skills[0].Use(this, target);
+            target.TakeDamage(damage);
         }
 
 
